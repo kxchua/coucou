@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "Coucou",
+  "productName": "CoucouSotong",
   "version": "0.5.9",
-  "identifier": "fr.louisraille.coucou",
+  "identifier": "au.kxchua.coucou-sotong",
   "build": {
     "beforeDevCommand": "npm run dev",
     "devUrl": "http://localhost:1420",

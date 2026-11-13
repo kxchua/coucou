@@ -11,7 +11,7 @@
 ; printing anything, so a leftover entry costs nothing beyond a dead path.
 
 !macro NSIS_HOOK_PREUNINSTALL
-  RMDir /r "$LOCALAPPDATA\Coucou\bin"
-  RMDir /r "$LOCALAPPDATA\Coucou\inbox"
-  Delete "$LOCALAPPDATA\Coucou\coucou.log"
+  RMDir /r "$LOCALAPPDATA\CoucouSotong\bin"
+  RMDir /r "$LOCALAPPDATA\CoucouSotong\inbox"
+  Delete "$LOCALAPPDATA\CoucouSotong\coucou.log"
 !macroend

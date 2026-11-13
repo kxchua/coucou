@@ -28,7 +28,7 @@ permissions:
 # On: a linux-v* tag publishes. Run this workflow by hand first and try the
 # Coucou-Linux artifact; set this to 'false' to build tags without publishing.
 env:
-  PUBLISH: 'true'
+  PUBLISH: 'false'  # Sotong fork: build artifacts only, never publish releases
 
 jobs:
   build:

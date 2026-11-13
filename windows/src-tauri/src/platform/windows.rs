@@ -61,7 +61,7 @@ pub fn config_dir() -> PathBuf {
     let base = std::env::var_os("APPDATA")
         .map(PathBuf::from)
         .unwrap_or_else(|| PathBuf::from("."));
-    base.join("Coucou")
+    base.join("CoucouSotong")
 }
 
 /// %LOCALAPPDATA%\Coucou — where coucou-hook.exe, the inbox and the log live.
@@ -69,7 +69,7 @@ pub fn local_dir() -> PathBuf {
     let base = std::env::var_os("LOCALAPPDATA")
         .map(PathBuf::from)
         .unwrap_or_else(|| PathBuf::from("."));
-    base.join("Coucou")
+    base.join("CoucouSotong")
 }
 
 /// Where a saved image goes, best first: Pictures (also where OneDrive moves

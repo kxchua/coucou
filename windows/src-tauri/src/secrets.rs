@@ -6,7 +6,7 @@ use std::sync::{LazyLock, Mutex};
 
 use keyring::Entry;
 
-const SERVICE: &str = "fr.louisraille.coucou";
+const SERVICE: &str = "au.kxchua.coucou-sotong";
 
 /// Every key Coucou may store. Anything outside this list is refused.
 pub const KNOWN_KEYS: &[&str] = &[

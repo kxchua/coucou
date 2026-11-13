@@ -29,6 +29,9 @@ use tauri::{AppHandle, Emitter};
 use crate::i18n::t;
 use crate::island::WINDOW_LABEL;
 
+/// Off in the Sotong fork: see `check`.
+pub const UPSTREAM_UPDATES: bool = false;
+
 pub const RELEASES_URL: &str = "https://api.github.com/repos/Louis-CFM/coucou/releases?per_page=30";
 /// Where "What's new" goes when no release is known.
 pub const RELEASES_PAGE: &str = "https://github.com/Louis-CFM/coucou/releases";
@@ -537,6 +540,12 @@ async fn fetch_latest() -> Result<Option<Release>, String> {
 /// One look at GitHub. `manual`: "Check now" in Settings, which opens the card
 /// when a new version is out.
 pub async fn check(app: &AppHandle, manual: bool) {
+    // Sotong fork: never offer upstream Coucou releases, which would install the
+    // official app over this one's settings and hooks. Updates come from the fork.
+    if !UPSTREAM_UPDATES {
+        let _ = (app, manual);
+        return;
+    }
     {
         let mut s = state();
         if s.busy() || s.check == CheckState::Checking {
